@@ -205,10 +205,7 @@ export default function App() {
                 Find us on TikTok <ExternalLinkIcon />
               </a>
             </div>
-            <div className="community-card__art">
-              <img src="/images/reality-hits.webp" alt="Jackson's chaotic city story continues." loading="lazy" />
-              <div className="community-card__tag">ONE LAST JOB…</div>
-            </div>
+
           </div>
         </section>
       </main>
