@@ -99,6 +99,7 @@ export default function GameIntro() {
     const startGunshot = () => {
       if (gunshotStarted) return;
       gunshotStarted = true;
+      window.clearTimeout(warningTimer);
       window.clearTimeout(sirenTimer);
       siren.onended = null;
       siren.pause();
@@ -111,8 +112,9 @@ export default function GameIntro() {
       }
     };
 
+    const warningTimer = window.setTimeout(() => setPhase("final-warning"), 3000);
     const sirenTimer = window.setTimeout(startGunshot, 4000);
-    timersRef.current.push(sirenTimer);
+    timersRef.current.push(warningTimer, sirenTimer);
 
     const sirenPlayback = siren.play();
     if (sirenPlayback?.catch) {
@@ -135,7 +137,7 @@ export default function GameIntro() {
 
   return (
     <div
-      className={`jackson-intro${starting ? " is-starting" : ""}${phase === "siren" ? " is-siren" : ""}${finishing ? " is-finishing" : ""}`}
+      className={`jackson-intro${starting ? " is-starting" : ""}${phase === "siren" || phase === "final-warning" ? " is-siren" : ""}${finishing ? " is-finishing" : ""}`}
       role="dialog"
       aria-modal="true"
       aria-label="Jackson game intro"
@@ -169,8 +171,8 @@ export default function GameIntro() {
             </button>
           ) : (
             <div className="jackson-intro__loading" role="status">
-              {phase === "gunshot" ? "FINAL WARNING" : "POLICE DISPATCH"}
-              <span>...</span>
+              {phase === "final-warning" ? "FINAL WARNING" : phase === "gunshot" ? "" : "POLICE DISPATCH"}
+              {phase !== "gunshot" && <span>...</span>}
             </div>
           )}
           <p className={`jackson-intro__hint${phase === "audio-error" ? " is-error" : ""}`} aria-live="polite">
