@@ -120,7 +120,6 @@ img { display: block; max-width: 100%; }
 .story-card__eyebrow { color: #a18445; font-size: 8px; font-weight: 900; letter-spacing: .17em; }
 .story-card__body h3 { margin: 9px 0 7px; color: var(--ink); font-family: "Arial Black", Impact, sans-serif; font-size: 21px; letter-spacing: -.055em; text-transform: uppercase; }
 .story-card__body p { max-width: 280px; margin: 0; color: #707482; font-size: 12px; line-height: 1.65; }
-.story-card__arrow { position: absolute; right: 20px; bottom: 21px; display: grid; width: 32px; height: 32px; place-items: center; border-radius: 50%; color: #16130a; background: #f5d77e; }
 
 /* Movement */
 .movement-section { display: grid; grid-template-columns: 1fr 1fr; min-height: 570px; color: #fff; background: #10172a; }
