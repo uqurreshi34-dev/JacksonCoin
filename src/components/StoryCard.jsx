@@ -1,5 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
-
 export default function StoryCard({ number, title, description, image, alt }) {
   return (
     <article className="story-card">
@@ -11,7 +9,6 @@ export default function StoryCard({ number, title, description, image, alt }) {
         <div className="story-card__eyebrow">THE JACKSON CHRONICLES</div>
         <h3>{title}</h3>
         <p>{description}</p>
-        <span className="story-card__arrow" aria-hidden="true"><ArrowUpRight size={18} /></span>
       </div>
     </article>
   );
