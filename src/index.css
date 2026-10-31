@@ -261,6 +261,12 @@ img { display: block; max-width: 100%; }
   .site-footer__fineprint { flex-direction: column; gap: 14px; }
 }
 
+/* Keep side-by-side story headlines readable on medium-width phones. */
+@media (min-width: 391px) and (max-width: 760px) {
+  .story-card__body { min-width: 0; padding-inline: 14px; }
+  .story-card__body h3 { font-size: 16px; line-height: 1.1; }
+}
+
 @media (max-width: 390px) {
   .page-width { width: calc(100% - 32px); }
   .site-header__inner { width: calc(100% - 28px); }
