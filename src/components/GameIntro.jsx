@@ -93,7 +93,16 @@ export default function GameIntro() {
     gunshot.currentTime = 0;
 
     gunshot.onended = finishSequence;
-    siren.onended = () => {
+
+    // Keep the police siren and flashing lights to a tight 4-second beat.
+    let gunshotStarted = false;
+    const startGunshot = () => {
+      if (gunshotStarted) return;
+      gunshotStarted = true;
+      window.clearTimeout(sirenTimer);
+      siren.onended = null;
+      siren.pause();
+      siren.currentTime = 0;
       setPhase("gunshot");
       gunshot.currentTime = 0;
       const gunshotPlayback = gunshot.play();
@@ -102,9 +111,15 @@ export default function GameIntro() {
       }
     };
 
+    const sirenTimer = window.setTimeout(startGunshot, 4000);
+    timersRef.current.push(sirenTimer);
+
     const sirenPlayback = siren.play();
     if (sirenPlayback?.catch) {
-      sirenPlayback.catch(handleAudioError);
+      sirenPlayback.catch(() => {
+        window.clearTimeout(sirenTimer);
+        handleAudioError();
+      });
     }
   };
 
@@ -120,7 +135,7 @@ export default function GameIntro() {
 
   return (
     <div
-      className={`jackson-intro${starting ? " is-starting" : ""}${finishing ? " is-finishing" : ""}`}
+      className={`jackson-intro${starting ? " is-starting" : ""}${phase === "siren" ? " is-siren" : ""}${finishing ? " is-finishing" : ""}`}
       role="dialog"
       aria-modal="true"
       aria-label="Jackson game intro"
