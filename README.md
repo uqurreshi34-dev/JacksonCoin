@@ -26,7 +26,7 @@ npm run preview
 
 ## Project settings
 
-Edit `src/config/site.js` to set the official TikTok profile URL and update the token contract / Base.meme destination if either changes. The TikTok URL currently points to the TikTok homepage because the official profile URL was not included with the supplied assets.
+Edit `src/config/site.js` to set the official TikTok profile URL and update the token contract / Base.meme destination if either changes. The official TikTok profile is configured as https://www.tiktok.com/@gta.jackson6.
 
 The coin address currently in the site was supplied in the project notes. Verify it against the live Base.meme listing before publishing.
 
