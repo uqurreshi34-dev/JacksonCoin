@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ArrowDown, ArrowUpRight, Check, Copy, ExternalLink, MoveUpRight } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import StoryCard from "@/components/StoryCard";
+import GameIntro from "@/components/GameIntro";
 import { siteConfig } from "@/config/site";
 
 const storyBeats = [
@@ -57,6 +58,7 @@ export default function App() {
 
   return (
     <div id="top" className="app-shell">
+      <GameIntro />
       <SiteHeader />
 
       <main>
