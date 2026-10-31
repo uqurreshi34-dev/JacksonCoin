@@ -158,15 +158,12 @@ img { display: block; max-width: 100%; }
 
 /* Community */
 .community-section { padding: 96px 0; background: #eeece5; }
-.community-card { position: relative; display: grid; grid-template-columns: 1.04fr .96fr; min-height: 420px; overflow: hidden; border-radius: 15px; background: var(--gold); }
+.community-card { position: relative; display: grid; grid-template-columns: 1fr; min-height: 0; overflow: hidden; border-radius: 15px; background: var(--gold); }
 .community-card__copy { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 58px clamp(30px,6vw,76px); }
 .community-card h2 { margin-top: 19px; font-size: clamp(2.8rem,5.5vw,4.8rem); }
 .community-card h2 span { color: #835c13; }
 .community-card__copy p { max-width: 360px; margin: 19px 0 25px; color: rgba(24,20,11,.72); font-size: 13px; line-height: 1.7; }
-.community-card__art { position: relative; min-height: 420px; overflow: hidden; background: #161a28; }
-.community-card__art::after { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, rgba(247,200,75,.15), transparent 28%), linear-gradient(0deg, rgba(7,10,19,.38), transparent 58%); }
-.community-card__art img { width: 100%; height: 100%; min-height: 420px; object-fit: cover; }
-.community-card__tag { position: absolute; z-index: 1; right: 20px; bottom: 20px; padding: 9px 13px; border: 1px solid rgba(255,255,255,.35); border-radius: 4px; color: white; background: rgba(10,16,32,.62); font-size: 9px; font-weight: 900; letter-spacing: .13em; backdrop-filter: blur(12px); }
+
 
 /* Footer */
 .site-footer { color: #fff; background: #080e1b; }
@@ -253,9 +250,6 @@ img { display: block; max-width: 100%; }
   .community-card { grid-template-columns: 1fr; }
   .community-card__copy { padding: 44px 26px; }
   .community-card h2 { font-size: clamp(2.7rem, 11vw, 4.3rem); }
-  .community-card__art { min-height: 270px; max-height: 330px; }
-  .community-card__art img { min-height: 270px; max-height: 330px; object-position: center 42%; }
-
   .site-footer__main { flex-wrap: wrap; min-height: 90px; padding-top: 17px; padding-bottom: 17px; }
   .site-footer__main > p { order: 3; flex-basis: 100%; }
   .site-footer__fineprint { flex-direction: column; gap: 14px; }
