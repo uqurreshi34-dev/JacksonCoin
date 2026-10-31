@@ -293,6 +293,9 @@ export default function GameIntro() {
     } catch {
       // The intro still works when session storage is unavailable.
     }
+    if (audioContextRef.current && audioContextRef.current.state !== "closed") {
+      audioContextRef.current.close().catch(() => {});
+    }
     setVisible(false);
   };
 
