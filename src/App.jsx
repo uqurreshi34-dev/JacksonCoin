@@ -133,7 +133,6 @@ export default function App() {
         <section id="movement" className="movement-section">
           <div className="movement-section__image">
             <img src="/images/movement.webp" alt="Jackson looking out over the city at sunset, wearing his Jackson jacket." loading="lazy" />
-            <div className="movement-section__image-caption">IT'S NOT JUST A COIN…</div>
           </div>
           <div className="movement-section__copy">
             <div className="eyebrow eyebrow--dark"><span className="eyebrow__dot" /> MORE THAN A PROFILE PICTURE</div>
