@@ -57,9 +57,10 @@ export default function App() {
   };
 
   return (
-    <div id="top" className="app-shell">
+    <>
       <GameIntro />
-      <SiteHeader />
+      <div id="top" className="app-shell">
+        <SiteHeader />
 
       <main>
         <section className="hero" aria-labelledby="hero-title">
@@ -230,6 +231,7 @@ export default function App() {
           <span>© {new Date().getFullYear()} $JACKSON</span>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   );
 }

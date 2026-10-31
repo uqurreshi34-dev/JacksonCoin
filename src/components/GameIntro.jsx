@@ -217,7 +217,7 @@ function playJacksonIntroAudio(context) {
   });
   playTone(context, master, start + 2.38, 0.23, {
     frequency: 92,
-    endFrequency:  thirtyFive(),
+    endFrequency:  35,
     volume: 0.32,
   });
 
@@ -246,7 +246,7 @@ function playJacksonIntroAudio(context) {
   // Final cinematic bass hit for the JACKSON title reveal.
   playTone(context, master, start + 3.92, 0.58, {
     frequency: 78,
-    endFrequency:  thirtyFive(),
+    endFrequency:  35,
     volume: 0.38,
   });
   playNoise(context, master, start + 3.94, 0.28, {
@@ -258,7 +258,7 @@ function playJacksonIntroAudio(context) {
   });
 }
 
-function thirtyFive() {
+function 35 {
   return 35;
 }
 
@@ -311,9 +311,10 @@ export default function GameIntro() {
       if (AudioContextClass) {
         const context = new AudioContextClass();
         audioContextRef.current = context;
-        context.resume().then(() => {
-          if (context.state === "running") playJacksonIntroAudio(context);
-        }).catch(() => {});
+        // Schedule immediately inside the click gesture; the graph starts as soon as
+        // the browser completes resume(), including on mobile Safari.
+        context.resume().catch(() => {});
+        playJacksonIntroAudio(context);
       }
     } catch {
       // Keep the visual intro usable if audio is unavailable.
