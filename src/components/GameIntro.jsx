@@ -22,8 +22,8 @@ export default function GameIntro() {
     document.body.style.overflow = "hidden";
 
     // Preload the real sound effects before the visitor presses START.
-    const siren = new Audio("/audio/police-siren.mp3");
-    const gunshot = new Audio("/audio/gunshot.mp3");
+    const siren = new Audio("/audio/117181__drewkelly__sirens.wav");
+    const gunshot = new Audio("/audio/683311__pnmcarrierailfan__pistol-gun-shot-mix.mp3");
     siren.preload = "auto";
     gunshot.preload = "auto";
     siren.volume = 0.95;
