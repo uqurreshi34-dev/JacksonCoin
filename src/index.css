@@ -398,11 +398,11 @@ img { display: block; max-width: 100%; }
   right: 0;
   transform: scaleX(-1);
 }
-.jackson-intro.is-starting .jackson-intro__edge-light {
+.jackson-intro.is-siren .jackson-intro__edge-light {
   opacity: 1;
   animation: jackson-police-edge-flash .5s steps(2, end) infinite;
 }
-.jackson-intro.is-starting .jackson-intro__edge-light--right {
+.jackson-intro.is-siren .jackson-intro__edge-light--right {
   animation-delay: .25s;
 }
 .jackson-intro.is-starting .jackson-intro__light--blue {
