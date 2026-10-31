@@ -231,8 +231,8 @@ img { display: block; max-width: 100%; }
   .story-card__arrow { right: 14px; bottom: 13px; width: 27px; height: 27px; }
 
   .movement-section { grid-template-columns: 1fr; }
-  .movement-section__image { min-height: 340px; max-height: 440px; }
-  .movement-section__image img { min-height: 340px; max-height: 440px; }
+  .movement-section__image { height: auto; min-height: 0; max-height: none; }
+  .movement-section__image img { display: block; width: 100%; height: auto; min-height: 0; max-height: none; object-fit: contain; }
   .movement-section__image::after { background: linear-gradient(0deg, rgba(7,10,19,.74), transparent 60%); }
   .movement-section__image-caption { left: 20px; bottom: 21px; }
   .movement-section__copy { padding: 62px 24px 66px; }
