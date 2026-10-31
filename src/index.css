@@ -381,6 +381,18 @@ img { display: block; max-width: 100%; }
   animation-delay: -1.9s;
   animation-direction: alternate-reverse;
 }
+/* On PRESS START, switch the ambient glow into a strong police-blue flash. */
+.jackson-intro.is-starting .jackson-intro__light--blue {
+  width: 86vw;
+  height: 64vh;
+  opacity: .68;
+  filter: blur(48px);
+  animation: jackson-police-blue-flash .48s steps(2, end) infinite;
+}
+.jackson-intro.is-starting .jackson-intro__light--red {
+  opacity: .045;
+  animation: none;
+}
 .jackson-intro__scanlines {
   position: absolute;
   z-index: 4;
@@ -540,6 +552,10 @@ img { display: block; max-width: 100%; }
 @keyframes jackson-light-sweep {
   from { transform: translateX(-12%) scale(.86); opacity: .12; }
   to { transform: translateX(18%) scale(1.12); opacity: .26; }
+}
+@keyframes jackson-police-blue-flash {
+  0%, 100% { opacity: .12; transform: translateX(-24%) scale(.82); }
+  50% { opacity: .76; transform: translateX(24%) scale(1.14); }
 }
 @keyframes jackson-intro-in {
   from { opacity: 0; transform: translateY(18px) scale(.98); }
