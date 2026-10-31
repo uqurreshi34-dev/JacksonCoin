@@ -276,8 +276,10 @@ img { display: block; max-width: 100%; }
 
 /* Show the complete story artwork on phones, including lettering near the edges. */
 @media (max-width: 760px) {
-  .story-card__image-wrap { height: auto; min-height: 0; aspect-ratio: auto; }
+  .story-card { grid-template-columns: minmax(0, 1fr); }
+  .story-card__image-wrap { width: 100%; height: auto; min-height: 0; aspect-ratio: auto; }
   .story-card__image { width: 100%; height: auto; object-fit: contain; }
+  .story-card__body { width: 100%; min-width: 0; }
 }
 
 @media (orientation: landscape) and (max-height: 520px) and (max-width: 980px) {
