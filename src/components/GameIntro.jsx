@@ -258,10 +258,6 @@ function playJacksonIntroAudio(context) {
   });
 }
 
-function 35 {
-  return 35;
-}
-
 export default function GameIntro() {
   const [visible, setVisible] = useState(() => {
     try {
