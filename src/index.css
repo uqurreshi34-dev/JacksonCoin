@@ -622,3 +622,15 @@ img { display: block; max-width: 100%; }
     transition-duration: .01ms !important;
   }
 }
+
+/* Allow the game intro content to scroll on phones in landscape. */
+@media (orientation: landscape) and (max-height: 520px) and (max-width: 980px) {
+  .jackson-intro__center {
+    max-height: calc(100vh - 112px);
+    max-height: calc(100dvh - 112px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+}
