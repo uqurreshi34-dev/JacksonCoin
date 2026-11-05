@@ -293,6 +293,29 @@ img { display: block; max-width: 100%; }
   font-weight: 850;
   letter-spacing: .2em;
 }
+@media (max-width: 600px) {
+  .story-card__play {
+    right: 12px;
+    bottom: 12px;
+    width: 52px;
+    height: 52px;
+  }
+  .story-video-modal { padding: 16px; }
+  .story-video-modal__header { gap: 12px; margin-bottom: 10px; }
+  .story-video-modal__heading p { font-size: 7px; }
+  .story-video-modal__close { width: 42px; height: 42px; }
+  .story-video-modal__frame { max-height: calc(100dvh - 132px); padding: 5px; }
+  .story-video-modal__frame video { max-height: calc(100dvh - 144px); }
+  .story-video-modal__hint { margin-top: 9px; font-size: 7px; }
+}
+@media (orientation: landscape) and (max-height: 520px) {
+  .story-video-modal { padding-block: 12px; }
+  .story-video-modal__header { margin-bottom: 7px; }
+  .story-video-modal__close { width: 38px; height: 38px; }
+  .story-video-modal__frame { max-height: calc(100dvh - 100px); }
+  .story-video-modal__frame video { max-height: calc(100dvh - 112px); }
+  .story-video-modal__hint { margin-top: 6px; }
+}
 
 /* Movement */
 .movement-section { display: grid; grid-template-columns: 1fr 1fr; min-height: 570px; color: #fff; background: #10172a; }
