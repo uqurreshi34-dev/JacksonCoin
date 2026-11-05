@@ -94,6 +94,7 @@ export default function StoryCard({
               <video
                 ref={videoRef}
                 src={video}
+                poster={image}
                 autoPlay
                 playsInline
                 preload="auto"
