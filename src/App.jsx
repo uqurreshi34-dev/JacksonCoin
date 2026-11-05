@@ -14,6 +14,8 @@ const storyBeats = [
     alt: "Jackson at his desk, clocking in for another day.",
     video: "/video/Jackson%20fired.mp4",
     videoTitle: "JACKSON FIRED",
+    video: "/video/Jackson%20fired.mp4",
+    videoTitle: "JACKSON FIRED",
   },
   {
     number: "02",
@@ -23,6 +25,8 @@ const storyBeats = [
     alt: "Jackson leaning back in a car, dreaming of a different life.",
     video: "/video/Jackson%20chilling.mp4",
     videoTitle: "JACKSON CHILLING",
+    video: "/video/Jackson%20chilling.mp4",
+    videoTitle: "JACKSON CHILLING",
   },
   {
     number: "03",
@@ -30,6 +34,8 @@ const storyBeats = [
     description: "The radio crackles. The lights come on. One last job… then I'm retiring.",
     image: "/images/reality-hits.webp",
     alt: "Jackson caught in a chaotic city scene with police lights and a helicopter.",
+    video: "/video/Jackson%20police%20chase.mp4",
+    videoTitle: "JACKSON POLICE CHASE",
     video: "/video/Jackson%20police%20chase.mp4",
     videoTitle: "JACKSON POLICE CHASE",
   },
